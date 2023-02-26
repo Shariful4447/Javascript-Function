@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button >click me-1</button>
+    <button id="second">click me-2</button>
+    <button id="last">click me-3</button>
+    <script>
+        function handleClick(){
+
+            document.body.style.backgroundColor='cyan';
+        }
+
+        var secondButton=document.getElementById('second');
+        secondButton.addEventListener('click',handleClick);
+        //secondButton.onclick=handleClick;
+
+        //another way of calling event
+        var lastButton=document.getElementById('last').addEventListener('click', function(){
+            document.body.style.backgroundColor='tomato';
+        })
+    </script>
+
+</body>
+</html>
